@@ -2,75 +2,66 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+    <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 body { 
-    background: #1e1e1e;
-    color: #00ff00;
-    font-family: 'Fira Code', monospace;
-    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333;
     line-height: 1.6;
+    min-height: 100vh;
 }
 
 .rendered-content {
-    background: #1e1e1e;
-    min-height: 100vh;
-    padding: 20px;
+    background: #ffffff;
+    padding: 40px;
 }
 
-.terminal {
-    background: #0a0a0a;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0,255,0,0.2);
-    position: relative;
-    color: #00ff00;
-    font-family: 'Fira Code', monospace;
+.content-wrapper {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
     line-height: 1.6;
+    max-width: 100%;
+    padding: 40px;
+    min-height: 100vh;
 }
 
-.terminal::before {
-    content: '● ● ●';
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    color: #666;
-    font-size: 14px;
+.content-wrapper h1 {
+    // ...existing h1 styles...
 }
 
-.terminal h1, 
-.terminal h2, 
-.terminal h3 { 
-    color: #0f0; 
-    margin-top: 30px; 
+h1 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin: 0 0 1em 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #eee;
 }
 
-.terminal p { 
-    opacity: 0;
-    animation: typing 1s ease-in-out forwards;
-    animation-delay: calc(var(--delay) * 100ms);
+h2 {
+    color: #34495e;
+    font-size: 1.6em;
+    margin: 1.5em 0 0.5em 0;
+    padding-bottom: 0.3em;
 }
 
-code { 
-    display: block;
-    background: #2d2d2d;
-    padding: 15px;
-    border-left: 3px solid #0f0;
-    margin: 10px 0;
+section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #fafafa;
+    border-left: 3px solid #2c3e50;
 }
 
-@keyframes typing {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}</style>
+/* ...rest of the minimal styles... */</style>
 </head>
-<body><div class="rendered-content"><div class="terminal"><h1>Johnny Coder</h1>
+<body><div class="rendered-content"><div class="content-wrapper"><h1>Johnny Coder</h1>
 <p>Software Engineer<br />
 email@example.com | (123) 456-7890<br />
 New York, NY | <a href="https://linkedin.com/in/johndoe">LinkedIn</a> | <a href="https://github.com/johndoe">GitHub</a></p>
 <h2>Summary</h2>
-<p>Highly skilled software engineer with over 5 years of specialized experience in backend development, distributed systems, and machine learning. Proven expertise in Python and cloud technologies, with a track record of leading successful projects and mentoring junior developers to enhance their skills and contribute productively.</p>
+<p>Software engineer with 5+ years of experience specializing in backend development, distributed systems, and machine learning. Strong background in Python and cloud technologies. Led multiple successful projects and mentored junior developers.</p>
 <h2>Skills</h2>
 <ul>
 <li><strong>Programming</strong>: Python (Expert, 5 years), JavaScript (Intermediate, 3 years), Java (Beginner, 1 year)</li>
@@ -81,13 +72,13 @@ New York, NY | <a href="https://linkedin.com/in/johndoe">LinkedIn</a> | <a href=
 <h2>Education</h2>
 <h3>PhD in Computer Science</h3>
 <p><strong>Awesome University</strong> | MyTown | 2014<br />
-<em> Thesis: "Deep Learning Approaches to the Self-Awesomeness Estimation Problem"<br />
-</em> GPA: 3.8<br />
+* Thesis: "Deep Learning Approaches to the Self-Awesomeness Estimation Problem"<br />
+* GPA: 3.8<br />
 * Honors: Magna Cum Laude, Department Honors</p>
 <h3>BSc in Computer Science</h3>
 <p><strong>University of HomeTown</strong> | HomeTown | 2010<br />
-<em> Major: Computer Science<br />
-</em> Minor: Awesomeology</p>
+* Major: Computer Science<br />
+* Minor: Awesomeology</p>
 <h2>Experience</h2>
 <h3>Senior Software Engineer</h3>
 <p><strong>TechCorp Inc.</strong> | San Francisco, CA | 2018 - Present</p>
