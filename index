@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+body { 
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.rendered-content {
+    background: #ffffff;
+    padding: 40px;
+}
+
+.content-wrapper {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    max-width: 100%;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.content-wrapper h1 {
+    // ...existing h1 styles...
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin: 0 0 1em 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #eee;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 1.6em;
+    margin: 1.5em 0 0.5em 0;
+    padding-bottom: 0.3em;
+}
+
+section {
+    margin: 30px 0;
+    padding: 20px;
+    background: #fafafa;
+    border-left: 3px solid #2c3e50;
+}
+
+/* ...rest of the minimal styles... */</style>
+</head>
+<body><div class="rendered-content"><div class="content-wrapper"><h1>May Riley</h1>
+<p>|4567 Main Street, Buffalo, New York 98052 | (716) 555-0100 | m.riley@live.com | www.linkedin.com/in/m.riley|</p>
+<h1>Profile</h1>
+<p>Friendly and engaging team player and leader able to inspire staff to perform their best. Detail oriented and experienced restaurant manager passionate about food and beverages. A multi-tasker who excels at staff training and recruiting with a track record of inspiring great customer service and customer satisfaction. Regularly exceed sales goals. A master in the art of upselling.</p>
+<h1>Experience</h1>
+<h2>Restaurant Manager | Contoso Bar and Grill | September 20XX – Present</h2>
+<ul>
+<li>Recruit, hire, train, and coach over 30 staff members on customer service skills, food &amp; beverage knowledge, sales, and health &amp; safety standards.</li>
+<li>Reduced costs by 7% through controls on overtime, operational efficiencies, and reduced waste.</li>
+<li>Consistently exceed monthly sales goals by a minimum of 10% by training FOH staff on upselling techniques and by creating a featured food and beverage program.</li>
+</ul>
+<h2>Restaurant Manager | Fourth Coffee Bistro | June 20XX – August 20XX</h2>
+<ul>
+<li>Created a cross-training program ensuring FOH staff members were able to perform confidently and effectively in all positions.</li>
+<li>Grew customer based and increased restaurant social media accounts by 19% through interactive promotions, engaging postings, and contests.</li>
+<li>Created and implemented staff health and safety standards compliance training program, achieving a score of 99% from the Board of Health.</li>
+<li>Successfully redesigned existing inventory system, ordering and food storage practices, resulting in a 6% decrease in food waste and higher net profits.</li>
+</ul>
+<h1>Education</h1>
+<h3>B.S. in Business Administration | June 20XX | Bigtown College, Chicago, Illinois</h3>
+<h3>A.A. in Hospitality Management | June 20XX | Bigtown College, Chicago, Illinois</h3>
+<h1>Skills &amp; Abilities</h1>
+<table>
+<thead>
+<tr>
+<th>* Accounting &amp; Budgeting * Proficient with POS systems * Excellent interpersonal and communication skills</th>
+<th>* Poised under pressure * Experienced in most restaurant positions * Fun and energetic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h1>Activities and Interests</h1>
+<p>Theater, environmental conservation, art, hiking, skiing, travel</p></div></div></body>
+</html>
