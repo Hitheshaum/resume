@@ -2,61 +2,70 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+    <style>@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
 
 body { 
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #ffffff;
-    color: #333;
+    background: #1e1e1e;
+    color: #00ff00;
+    font-family: 'Fira Code', monospace;
+    padding: 20px;
     line-height: 1.6;
-    min-height: 100vh;
 }
 
 .rendered-content {
-    background: #ffffff;
-    padding: 40px;
-}
-
-.content-wrapper {
-    font-family: 'Open Sans', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    max-width: 100%;
-    padding: 40px;
+    background: #1e1e1e;
     min-height: 100vh;
-}
-
-.content-wrapper h1 {
-    // ...existing h1 styles...
-}
-
-h1 {
-    color: #2c3e50;
-    font-size: 2.2em;
-    margin: 0 0 1em 0;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #eee;
-}
-
-h2 {
-    color: #34495e;
-    font-size: 1.6em;
-    margin: 1.5em 0 0.5em 0;
-    padding-bottom: 0.3em;
-}
-
-section {
-    margin: 30px 0;
     padding: 20px;
-    background: #fafafa;
-    border-left: 3px solid #2c3e50;
 }
 
-/* ...rest of the minimal styles... */</style>
+.terminal {
+    background: #0a0a0a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,255,0,0.2);
+    position: relative;
+    color: #00ff00;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+}
+
+.terminal::before {
+    content: '● ● ●';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.terminal h1, 
+.terminal h2, 
+.terminal h3 { 
+    color: #0f0; 
+    margin-top: 30px; 
+}
+
+.terminal p { 
+    opacity: 0;
+    animation: typing 1s ease-in-out forwards;
+    animation-delay: calc(var(--delay) * 100ms);
+}
+
+code { 
+    display: block;
+    background: #2d2d2d;
+    padding: 15px;
+    border-left: 3px solid #0f0;
+    margin: 10px 0;
+}
+
+@keyframes typing {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}</style>
 </head>
-<body><div class="rendered-content"><div class="content-wrapper"><h1>May Riley</h1>
+<body><div class="rendered-content"><div class="terminal"><h1>May Riley</h1>
 <p>4567 Main Street, Buffalo, New York 98052 | (716) 555-0100 | m.riley@live.com | www.linkedin.com/in/m.riley</p>
 <h1>Profile</h1>
 <p>Friendly and engaging team player and leader able to inspire staff to perform their best. Detail oriented and experienced restaurant manager passionate about food and beverages. A multi-tasker who excels at staff training and recruiting with a track record of inspiring great customer service and customer satisfaction. Regularly exceed sales goals. A master in the art of upselling.</p>
