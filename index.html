@@ -2,59 +2,178 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <style>.html-view .rendered-content @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-
-.rendered-content {
-    font-family: 'Open Sans', sans-serif;
-    background: #ffffff;
-    color: #333;
-    line-height: 1.6;
-    padding: 40px;
-}
-
-.rendered-content .content-wrapper {
-    font-family: 'Open Sans', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    max-width: 100%;
-    padding: 40px;
+    <style>.html-view .rendered-content /* GitHub-style markdown CSS */
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    color: #1F2328;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
     min-height: 100vh;
 }
 
-.rendered-content .content-wrapper h1 {
-    // ...existing h1 styles...
+.rendered-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px;
+    background: #ffffff;
 }
 
-.rendered-content h1 {
-    color: #2c3e50;
-    font-size: 2.2em;
-    margin: 0 0 1em 0;
-    padding-bottom: 0.5em;
-    border-bottom: 1px solid #eee;
+.resume-layout {
+    font-size: 16px;
+    line-height: 1.5;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    border-radius: 5px;
 }
 
-.rendered-content h2 {
-    color: #34495e;
-    font-size: 1.6em;
-    margin: 1.5em 0 0.5em 0;
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1 {
     padding-bottom: 0.3em;
+    font-size: 2em;
+    border-bottom: 1px solid #d0d7de;
 }
 
-.rendered-content section {
-    margin: 30px 0;
-    padding: 20px;
-    background: #fafafa;
-    border-left: 3px solid #2c3e50;
+h2 {
+    padding-bottom: 0.3em;
+    font-size: 1.5em;
+    border-bottom: 1px solid #d0d7de;
 }
 
-/* ...rest of the minimal styles... */</style>
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+/* Links */
+a {
+    color: #0969da;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2em;
+}
+
+li {
+    margin: 0.25em 0;
+}
+
+/* Code */
+code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
+}
+
+pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+}
+
+pre code {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+/* Blockquotes */
+blockquote {
+    padding: 0 1em;
+    color: #656d76;
+    border-left: 0.25em solid #d0d7de;
+    margin: 0 0 16px 0;
+}
+
+/* Tables */
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin: 16px 0;
+    width: 100%;
+}
+
+table th, table td {
+    padding: 6px 13px;
+    border: 1px solid #d0d7de;
+}
+
+table th {
+    font-weight: 600;
+    background-color: #f6f8fa;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+/* Horizontal Rule */
+hr {
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #d0d7de;
+    border: 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Task Lists */
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item input {
+    margin: 0 0.2em 0.25em -1.6em;
+    vertical-align: middle;
+}
+
+section {
+    margin: 18px 0;
+    padding: 18px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}</style>
 </head>
-<body><div class="rendered-content"><div class="content-wrapper"><h1>Johnny Coder</h1>
+<body><div class="rendered-content"><div class="resume-layout"><h1>Johnny Coder</h1>
 <p>Software Engineer<br />
-email@example.com | (123) 456-7890<br />
-New York, NY | <a href="https://linkedin.com/in/johndoe">LinkedIn</a> | <a href="https://github.com/johndoe">GitHub</a></p>
+e-mail: email@example.com | Phone: (123) 456-7890<br />
+Location: New York, NY | <a href="https://linkedin.com/in/johndoe">LinkedIn</a> | <a href="https://github.com/johndoe">GitHub</a></p>
 <h2>Summary</h2>
-<p>Software engineer with 5+ years of experience specializing in backend development, distributed systems, and machine learning. Strong background in Python and cloud technologies. Led multiple successful projects and mentored junior developers.</p>
+<p>Dynamic and results-driven software engineer with over 5 years of experience, specializing in backend development, distributed systems, and machine learning. Expertise in Python and various cloud technologies, complemented by a strong foundation in algorithm design and data structures. Proven track record of leading successful projects and mentoring junior developers, fostering an environment that enhances team productivity and innovation.</p>
 <h2>Skills</h2>
 <ul>
 <li><strong>Programming</strong>: Python (Expert, 5 years), JavaScript (Intermediate, 3 years), Java (Beginner, 1 year)</li>
