@@ -2,196 +2,202 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <style>.rendered-content /* GitHub-style markdown CSS */
-{
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    font-size: 16px;
-    line-height: 1.5;
-    word-wrap: break-word;
-    color: #1F2328;
-    background-color: #ffffff;
-    max-width: 900px;
+    <style>.rendered-content @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
+body { 
+    background: #1e1e1e;
+    color: #00ff00;
+    font-family: 'Fira Code', monospace;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.rendered-content {
+    background: #1e1e1e;
+    min-height: 100vh;
+    padding: 20px;
+    color: #00ff00;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+}
+
+.terminal {
+    background: #0a0a0a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,255,0,0.2);
+    position: relative;
+    color: #00ff00;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
     margin: 0 auto;
-    padding: 32px;
+    max-width: 900px;
 }
 
-.resume-layout {
-    font-size: 16px;
-    line-height: 1.5;
+.terminal::before {
+    content: '● ● ●';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    color: #666;
+    font-size: 14px;
 }
 
-/* Headings */
-.resume-layout h1, 
-.resume-layout h2, 
-.resume-layout h3, 
-.resume-layout h4, 
-.resume-layout h5, 
-.resume-layout h6 {
-    margin-top: 24px;
-    margin-bottom: 16px;
-    font-weight: 600;
-    line-height: 1.25;
+.terminal h1, 
+.terminal h2, 
+.terminal h3 { 
+    color: #0f0; 
+    margin-top: 30px;
+    font-family: 'Fira Code', monospace;
 }
 
-.resume-layout h1 {
-    padding-bottom: 0.3em;
-    font-size: 2em;
-    border-bottom: 1px solid #d0d7de;
+.terminal p { 
+    font-family: 'Fira Code', monospace;
+    color: #00ff00;
 }
 
-.resume-layout h2 {
-    padding-bottom: 0.3em;
-    font-size: 1.5em;
-    border-bottom: 1px solid #d0d7de;
+.terminal code { 
+    background: #2a2a2a;
+    color: #0f0;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Fira Code', monospace;
 }
 
-.resume-layout h3 {
-    font-size: 1.25em;
+.terminal pre {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Fira Code', monospace;
 }
 
-.resume-layout h4 {
-    font-size: 1em;
+.terminal pre code {
+    background: transparent;
+    padding: 0;
 }
 
-/* Links */
-.resume-layout a {
-    color: #0969da;
+.terminal a {
+    color: #0f0;
     text-decoration: none;
+    border-bottom: 1px dashed #0f0;
 }
 
-.resume-layout a:hover {
-    text-decoration: underline;
+.terminal a:hover {
+    border-bottom-style: solid;
 }
 
-/* Lists */
-.resume-layout ul, 
-.resume-layout ol {
-    margin-top: 0;
-    margin-bottom: 16px;
-    padding-left: 2em;
+.terminal ul, 
+.terminal ol {
+    padding-left: 20px;
 }
 
-.resume-layout li {
-    margin: 0.25em 0;
+.terminal li {
+    margin: 5px 0;
 }
 
-/* Code */
-.resume-layout code {
-    padding: 0.2em 0.4em;
-    margin: 0;
-    font-size: 85%;
-    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-    background-color: rgba(175, 184, 193, 0.2);
-    border-radius: 6px;
+.terminal blockquote {
+    border-left: 3px solid #0f0;
+    margin: 20px 0;
+    padding-left: 20px;
+    font-style: italic;
 }
 
-.resume-layout pre {
-    padding: 16px;
-    overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f6f8fa;
-    border-radius: 6px;
-}
-
-.resume-layout pre code {
-    padding: 0;
-    margin: 0;
-    background-color: transparent;
-}
-
-/* Blockquotes */
-.resume-layout blockquote {
-    padding: 0 1em;
-    color: #656d76;
-    border-left: 0.25em solid #d0d7de;
-    margin: 0 0 16px 0;
-}
-
-/* Tables */
-.resume-layout table {
-    border-spacing: 0;
+.terminal table {
     border-collapse: collapse;
-    margin: 16px 0;
     width: 100%;
+    margin: 20px 0;
 }
 
-.resume-layout table th, 
-.resume-layout table td {
-    padding: 6px 13px;
-    border: 1px solid #d0d7de;
+.terminal th,
+.terminal td {
+    border: 1px solid #0f0;
+    padding: 8px;
+    text-align: left;
 }
 
-.resume-layout table th {
-    font-weight: 600;
-    background-color: #f6f8fa;
+.terminal th {
+    background: #2a2a2a;
 }
 
-.resume-layout table tr:nth-child(2n) {
-    background-color: #f6f8fa;
-}
-
-/* Horizontal Rule */
-.resume-layout hr {
-    height: 0.25em;
-    padding: 0;
-    margin: 24px 0;
-    background-color: #d0d7de;
-    border: 0;
-}
-
-/* Images */
-.resume-layout img {
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-/* Task Lists */
-.resume-layout .task-list-item {
-    list-style-type: none;
-}
-
-.resume-layout .task-list-item input {
-    margin: 0 0.2em 0.25em -1.6em;
-    vertical-align: middle;
+@keyframes typing {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }</style>
 </head>
-<body><div class="rendered-content"><div class="resume-layout"><h1>May Riley</h1>
-<p>4567 Main Street, Buffalo, New York 98052 | (716) 555-0100 | m.riley@live.com | www.linkedin.com/in/m.riley</p>
-<h1>Profile</h1>
-<p>Dynamic restaurant manager with a strong ability to lead and motivate teams to achieve excellence. Known for being friendly and engaging, I inspire staff to maximize their performance and deliver exceptional customer service. With a keen eye for detail, I am passionate about food and beverages, and I excel in multitasking, staff training, and recruitment. My proven track record includes consistently exceeding sales goals and mastering upselling techniques that enhance customer satisfaction and drive revenue growth.</p>
-<h1>Experience</h1>
-<h2>Restaurant Manager | Contoso Bar and Grill | September 20XX – Present</h2>
+<body><div class="rendered-content"><div class="terminal"><h1>Sydney Krier</h1>
+<h2>Contact Information</h2>
+<p><strong>Email:</strong> skk10c@my.fsu.edu<br />
+<strong>Address:</strong> 3260 Hidden Lake Dr E, Jacksonville, FL 32216<br />
+<strong>Phone:</strong> (904) 451-3844  </p>
+<hr />
+<h2>Education</h2>
+<p><strong>Florida State University</strong><br />
+- Master of Science in Finance (Current GPA: 4.00)<br />
+- Bachelor of Science in Finance and Real Estate<br />
+- Bachelor of Science in Applied Economics<br />
+- Minor in English<br />
+- Minor in Free Enterprise &amp; Ethics  </p>
+<hr />
+<h2>Experience</h2>
+<h2>State Board of Administration of Florida</h2>
+<p><strong>Position:</strong> Private Equity Intern<br />
+<strong>Location:</strong> Tallahassee, FL<br />
+<strong>Dates:</strong> May 2014 - Present  </p>
 <ul>
-<li>Recruit, hire, train, and coach over 30 staff members on customer service skills, food &amp; beverage knowledge, sales, and health &amp; safety standards.</li>
-<li>Reduced costs by 7% through controls on overtime, operational efficiencies, and reduced waste.</li>
-<li>Consistently exceed monthly sales goals by a minimum of 10% by training FOH staff on upselling techniques and by creating a featured food and beverage program.</li>
+<li>Assist in due diligence analysis of new investments including buyouts, venture capital, growth equity, secondary sales, and coinvestments  </li>
+<li>Gather data and update Microsoft Excel models based on performance of private equity funds  </li>
+<li>Maintain organization of connections, presentations, and valuations of firms in portfolio  </li>
+<li>Publish FSBA Private Equity weekly update booklet tracking investment process, calendar, meeting notes, fund overviews, and deal log  </li>
 </ul>
-<h2>Restaurant Manager | Fourth Coffee Bistro | June 20XX – August 20XX</h2>
+<h3>FSU New Student &amp; Family Programs</h3>
+<p><strong>Position:</strong> Administrative Assistant<br />
+<strong>Location:</strong> Tallahassee, FL<br />
+<strong>Dates:</strong> January 2013 - May 2014  </p>
 <ul>
-<li>Created a cross-training program ensuring FOH staff members were able to perform confidently and effectively in all positions.</li>
-<li>Grew customer base and increased restaurant social media accounts by 19% through interactive promotions, engaging postings, and contests.</li>
-<li>Created and implemented staff health and safety standards compliance training program, achieving a score of 99% from the Board of Health.</li>
-<li>Successfully redesigned existing inventory system, ordering, and food storage practices, resulting in a 6% decrease in food waste and higher net profits.</li>
+<li>Implemented efficient check-in process for 16,000 family members and students  </li>
+<li>Managed and processed incoming payments of high volume  </li>
+<li>Coordinated across all executive departments of FSU for successful orientation presentations  </li>
+<li>Interacted with incoming students and their family members regarding transitions  </li>
 </ul>
-<h1>Education</h1>
-<h2>B.S. in Business Administration | June 20XX | Bigtown College, Chicago, Illinois</h2>
-<h2>A.A. in Hospitality Management | June 20XX | Bigtown College, Chicago, Illinois</h2>
-<h1>Skills &amp; Abilities</h1>
-<table>
-<thead>
-<tr>
-<th>* Accounting &amp; Budgeting * Proficient with POS systems * Excellent interpersonal and communication skills</th>
-<th>* Poised under pressure * Experienced in most restaurant positions * Fun and energetic</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h1>Activities and Interests</h1>
-<p>Theater, environmental conservation, art, hiking, skiing, travel</p></div></div></body>
+<h3>FSU New Student &amp; Family Programs</h3>
+<p><strong>Position:</strong> Orientation Leader<br />
+<strong>Location:</strong> Tallahassee, FL<br />
+<strong>Dates:</strong> November 2011 - January 2013  </p>
+<ul>
+<li>Directed welcome presentations to acclimate 150 new students  </li>
+<li>Provided extensive knowledge and resources to generate a comfortable transitional environment for new students and their families  </li>
+<li>Collaborated with 36 other Orientation Leaders to meet the goals of the professional staff  </li>
+</ul>
+<hr />
+<h2>Memberships</h2>
+<ul>
+<li><strong>Urban Land Institute</strong>  </li>
+<li>Attend summits and meetings regarding how Real Estate can better communities  </li>
+<li><strong>The International Council of Shopping Centers</strong>  </li>
+<li>Student exposure to deal making events for the commercial Real Estate industry  </li>
+<li><strong>FSU Real Estate Society, Director of Women in Real Estate</strong>  </li>
+<li>Create a peer-to-peer mentorship program for professional students  </li>
+<li>Develop professional goals through presentations  </li>
+<li>Former Treasurer, organized dues and made payments for the success of the society  </li>
+<li><strong>Alpha Chi Omega, Alumnae Member</strong>  </li>
+<li>Beta Eta Chapter, Florida State University  </li>
+</ul>
+<hr />
+<h2>Licensing / Important Skills</h2>
+<ul>
+<li>ARGUS Valuation Certification  </li>
+<li>Bloomberg Certification (In Process)  </li>
+<li>Advanced Microsoft Excel  </li>
+<li>Econometrics Modeling  </li>
+</ul>
+<hr />
+<h1>Relevant Coursework</h1>
+<ul>
+<li>Real Estate Finance and Investments  </li>
+<li>Applied Econometrics in Finance  </li>
+<li>Problems in Financial Management  </li>
+<li>Perspectives on Free Enterprise  </li>
+</ul></div></div></body>
 </html>
