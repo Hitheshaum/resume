@@ -2,191 +2,179 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <style>.rendered-content @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
-
-body { 
-    background: #1e1e1e;
-    color: #00ff00;
-    font-family: 'Fira Code', monospace;
-    padding: 20px;
-    line-height: 1.6;
-}
-
-.rendered-content {
-    background: #1e1e1e;
-    min-height: 100vh;
-    padding: 20px;
-    color: #00ff00;
-    font-family: 'Fira Code', monospace;
-    line-height: 1.6;
-}
-
-.terminal {
-    background: #0a0a0a;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 20px rgba(0,255,0,0.2);
-    position: relative;
-    color: #00ff00;
-    font-family: 'Fira Code', monospace;
-    line-height: 1.6;
-    margin: 0 auto;
+    <style>.rendered-content /* GitHub-style markdown CSS */
+{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    color: #1F2328;
+    background-color: #ffffff;
     max-width: 900px;
+    margin: 0 auto;
+    padding: 32px;
 }
 
-.terminal::before {
-    content: '● ● ●';
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    color: #666;
-    font-size: 14px;
+.resume-layout {
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-.terminal h1, 
-.terminal h2, 
-.terminal h3 { 
-    color: #0f0; 
-    margin-top: 30px;
-    font-family: 'Fira Code', monospace;
+/* Headings */
+.resume-layout h1, 
+.resume-layout h2, 
+.resume-layout h3, 
+.resume-layout h4, 
+.resume-layout h5, 
+.resume-layout h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
 }
 
-.terminal p { 
-    font-family: 'Fira Code', monospace;
-    color: #00ff00;
+.resume-layout h1 {
+    padding-bottom: 0.3em;
+    font-size: 2em;
+    border-bottom: 1px solid #d0d7de;
 }
 
-.terminal code { 
-    background: #2a2a2a;
-    color: #0f0;
-    padding: 2px 5px;
-    border-radius: 3px;
-    font-family: 'Fira Code', monospace;
+.resume-layout h2 {
+    padding-bottom: 0.3em;
+    font-size: 1.5em;
+    border-bottom: 1px solid #d0d7de;
 }
 
-.terminal pre {
-    background: #2a2a2a;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-    font-family: 'Fira Code', monospace;
+.resume-layout h3 {
+    font-size: 1.25em;
 }
 
-.terminal pre code {
-    background: transparent;
-    padding: 0;
+.resume-layout h4 {
+    font-size: 1em;
 }
 
-.terminal a {
-    color: #0f0;
+/* Links */
+.resume-layout a {
+    color: #0969da;
     text-decoration: none;
-    border-bottom: 1px dashed #0f0;
 }
 
-.terminal a:hover {
-    border-bottom-style: solid;
+.resume-layout a:hover {
+    text-decoration: underline;
 }
 
-.terminal ul, 
-.terminal ol {
-    padding-left: 20px;
+/* Lists */
+.resume-layout ul, 
+.resume-layout ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2em;
 }
 
-.terminal li {
-    margin: 5px 0;
+.resume-layout li {
+    margin: 0.25em 0;
 }
 
-.terminal blockquote {
-    border-left: 3px solid #0f0;
-    margin: 20px 0;
-    padding-left: 20px;
-    font-style: italic;
+/* Code */
+.resume-layout code {
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
 }
 
-.terminal table {
+.resume-layout pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+}
+
+.resume-layout pre code {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+/* Blockquotes */
+.resume-layout blockquote {
+    padding: 0 1em;
+    color: #656d76;
+    border-left: 0.25em solid #d0d7de;
+    margin: 0 0 16px 0;
+}
+
+/* Tables */
+.resume-layout table {
+    border-spacing: 0;
     border-collapse: collapse;
+    margin: 16px 0;
     width: 100%;
-    margin: 20px 0;
 }
 
-.terminal th,
-.terminal td {
-    border: 1px solid #0f0;
-    padding: 8px;
-    text-align: left;
+.resume-layout table th, 
+.resume-layout table td {
+    padding: 6px 13px;
+    border: 1px solid #d0d7de;
 }
 
-.terminal th {
-    background: #2a2a2a;
+.resume-layout table th {
+    font-weight: 600;
+    background-color: #f6f8fa;
 }
 
-@keyframes typing {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.resume-layout table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+/* Horizontal Rule */
+.resume-layout hr {
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #d0d7de;
+    border: 0;
+}
+
+/* Images */
+.resume-layout img {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Task Lists */
+.resume-layout .task-list-item {
+    list-style-type: none;
+}
+
+.resume-layout .task-list-item input {
+    margin: 0 0.2em 0.25em -1.6em;
+    vertical-align: middle;
 }</style>
 </head>
-<body><div class="rendered-content"><div class="terminal"><h1>Johnny Coder</h1>
-<p>Software Engineer<br />
-email@example.com | (123) 456-7890<br />
-New York, NY | <a href="https://linkedin.com/in/johndoe">LinkedIn</a> | <a href="https://github.com/johndoe">GitHub</a>  </p>
-<h2>Summary</h2>
-<p>Dynamic and results-oriented software engineer with over 5 years of experience specializing in backend development, distributed systems, and machine learning. Proficient in leveraging Python and various cloud technologies to solve complex problems and enhance system performance. Proven track record of successfully leading projects from inception to completion while mentoring junior developers to promote team growth and knowledge sharing.</p>
-<h2>Skills</h2>
-<ul>
-<li><strong>Programming</strong>: Python (Expert, 5 years), JavaScript (Intermediate, 3 years), Java (Beginner, 1 year)</li>
-<li><strong>Languages</strong>: English (Native), Spanish (Fluent), Mandarin (Basic)</li>
-<li><strong>Technologies</strong>: Docker, Kubernetes, AWS, PostgreSQL, Redis</li>
-<li><strong>Soft Skills</strong>: Team Leadership, Mentoring, Project Management  </li>
-</ul>
-<h2>Education</h2>
-<h3>PhD in Computer Science</h3>
-<p><strong>Awesome University</strong> | MyTown | 2014<br />
-* Thesis: "Deep Learning Approaches to the Self-Awesomeness Estimation Problem"<br />
-* GPA: 3.8<br />
-* Honors: Magna Cum Laude, Department Honors  </p>
-<h3>BSc in Computer Science</h3>
-<p><strong>University of HomeTown</strong> | HomeTown | 2010<br />
-* Major: Computer Science<br />
-* Minor: Awesomeology  </p>
-<h2>Experience</h2>
-<h3>Senior Software Engineer</h3>
-<p><strong>TechCorp Inc.</strong> | San Francisco, CA | 2018 - Present</p>
-<p>Led backend development team in building scalable microservices architecture:<br />
-* Architected and implemented high-performance API serving 10M+ daily requests<br />
-* Reduced system latency by 40% through optimization of database queries<br />
-* Mentored 5 junior developers and established code review practices<br />
-* Technologies used: Python, Docker, Kubernetes, AWS  </p>
-<h3>Software Developer</h3>
-<p><strong>StartupCo</strong> | New York, NY | 2015 - 2018</p>
-<p>Full-stack developer for a SaaS platform:<br />
-* Developed and maintained customer-facing dashboard using React<br />
-* Implemented automated testing pipeline reducing deployment time by 50%<br />
-* Collaborated with product team to improve user experience<br />
-* Stack: Python, JavaScript, PostgreSQL, Redis  </p>
-<h2>Projects</h2>
-<h3>Cool Project Name</h3>
-<p><em>Open Source Contribution</em>  </p>
-<p>A brief description of your cool project:<br />
-* Bullet point about the key feature<br />
-* Another compelling feature<br />
-* Technical achievement  </p>
-<p><a href="https://github.com/username/project">View Project</a> | <a href="https://demo.project.com">Live Demo</a>  </p>
-<h2>Certifications &amp; Awards</h2>
-<ul>
-<li><strong>AWS Certified Solutions Architect</strong> | Amazon Web Services | 2019 - 2022</li>
-<li><strong>Best Paper Award</strong> | IEEE Conference | 2013  </li>
-<li>Award for the paper on something awesome</li>
-</ul>
-<h2>Publications</h2>
-<ul>
-<li><a href="http://example.com/blog1">Title of Blog Post</a> - Brief description</li>
-<li>Author, A., &amp; Coder, J. (2014). <em>Title of Paper</em>. Journal Name, 1(1), 1-10  </li>
-</ul>
-<h2>Volunteer Experience</h2>
-<h3>Code Mentor</h3>
-<p><strong>CoderDojo</strong> | 2019 - Present<br />
-* Teach programming fundamentals to high school students<br />
-* Organized weekly coding workshops<br />
-* Developed curriculum for Python basics</p></div></div></body>
+<body><div class="rendered-content"><div class="resume-layout"><p>August 4, 2018</p>
+<p>To Whom It May Concern:</p>
+<p>This letter serves to verify that I was Hithesh Reddivari’s Professor while he was a<br />
+student at University of Southern California.</p>
+<p>Hithesh Reddivari worked under my guidance on a biomedical device project. I have also<br />
+reviewed Hithesh Reddivari’s transcript and coursework from the University. Based on<br />
+the course contents, projects done and grades received, I confirm that he has gained<br />
+knowledge in the following skills:</p>
+<p>Skill: Health/wellness related sensing, Embedded Systems, C/C++ programming, Signal<br />
+Processing and Algorithms<br />
+Course: BME-590 Directed Research under my supervision</p>
+<p>Skill: Machine Learning<br />
+Course: CSCI-567 Machine Learning</p>
+<p>Skill: Control Electronics<br />
+Course: EE-579 Wireless and Mobile Networks Design and Laboratory</p>
+<p>Sincerely,</p>
+<p>Gerald E. Loeb, M.D.<br />
+Professor of Biomedical Engineering<br />
+Director of the Medical Device Development Facility<br />
+Adjunct Professor of Neurology, Pharmacy<br />
+gloeb@usc.edu / 213-821-5311</p></div></div></body>
 </html>
